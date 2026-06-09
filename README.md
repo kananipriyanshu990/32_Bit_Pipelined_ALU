@@ -146,19 +146,9 @@ Waveform analysis was performed to validate timing relationships between operand
 ## Project Structure
 
 ```text
-PIPELINED_ALU/
+32_Bit_Pipelined_ALU/
 │
-├── RTL/
-│   ├── ALU.v
-│   ├── CONTROL_UNIT.v
-│   ├── REGISTER_FILE.v
-│   ├── PIPELINE_REGISTER.v
-│   └── PIPELINED_ALU.v
-│
-├── TB/
-│   └── PIPELINED_ALU_TB.sv
-│
-├── Documentation/
+├── Documentates/
 │   ├── Project Description
 │   ├── ALU Description
 │   ├── Control Unit Description
@@ -167,7 +157,26 @@ PIPELINED_ALU/
 │   ├── Testbench Description
 │   └── Architecture and Dataflow Description
 │
-├── Waveforms/
+├── Images/
+│   ├── 32_Bit_ALU
+│   ├── Architecture_&_Pipeline
+│   ├── Control_Unit
+│   ├── Pipelined_ALU
+│   └── Register_File
+│
+├── RTL_Source_Code/
+│   ├── ALU_32_BIT.v
+│   ├── CONTROL_UNIT.v
+│   ├── MUX.v
+│   ├── PIPELINED_ALU.v
+│   ├── P_REGISTER.v
+│   └── REG_FILE.v
+│
+├── Testbenches/
+│   ├── ALU_TB.sv
+│   ├── Control_unit_TB.sv
+│   ├── MEM_B_TB.sv
+│   └── PIPELINED_ALU_TB.sv
 │
 └── README.md
 ```
@@ -176,11 +185,7 @@ PIPELINED_ALU/
 
 ## Tools Used
 
-* Verilog HDL
-* SystemVerilog
-* GTKWave
-* Icarus Verilog
-* Yosys (Synthesis)
+*Xilinx Vivado (RTL design, verification and netlist synthesis)
 
 ---
 
@@ -201,24 +206,8 @@ This project provided practical experience in:
 
 ---
 
-## Future Improvements
-
-Potential extensions include:
-
-* Hazard Detection Logic
-* Data Forwarding
-* Variable Shift Operations
-* Parameterized Data Width
-* Performance Optimization
-* Advanced Verification Environment
-* FPGA Implementation
-
----
-
 ## Author
 
-Priyanshu Kanani
-
-B.Tech Electronics and Communication Engineering
-
-RTL Design | Digital Design | Verification | VLSI
+Priyanshu D. Kanani
+Interested in RTL Design, Digital Design, Verification, VLSI
+B.Tech Electronics and Communication Engineering (2nd yr), DDU Nadiad
