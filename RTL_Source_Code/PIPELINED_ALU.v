@@ -5,7 +5,18 @@
 // Modification Date: 05-06-2026 : modified internal wires as output for analysis and debugging 
 //////////////////////////////////////////////////////////////////////////////////
 
-module PIPELINED_ALU(output wire [31:0]w_stage3,          //32-bit bus between multiplexer and register file input
+module PIPELINED_ALU(output wire [31:0]w_stage5,          //32-bit bus between multiplexer and register file input
+                     output wire [31:0]w_stage4,
+                     output wire [31:0]w_stage3,
+                     output wire [31:0]w_stage2A,
+                     output wire [31:0]w_stage2B,
+                     output wire [31:0]w_stage1A,
+                     output wire [31:0]w_stage1B,
+                     output wire [3:0]opcode,
+                     output wire [3:0]rd_adr1,
+                     output wire [3:0]rd_adr2,
+                     output wire [3:0]wr_adr,
+                     output wire wr_en,
                      output wire carry_flag,              //carry flag signal
                      output wire overflow_flag,           //overflow flag signal
                      output wire zero_flag,               //zero flag signal
