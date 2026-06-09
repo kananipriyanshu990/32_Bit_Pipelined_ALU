@@ -6,17 +6,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module PIPELINED_ALU(output wire [31:0]w_stage5,          //32-bit bus between multiplexer and register file input
-                     output wire [31:0]w_stage4,
-                     output wire [31:0]w_stage3,
-                     output wire [31:0]w_stage2A,
-                     output wire [31:0]w_stage2B,
-                     output wire [31:0]w_stage1A,
-                     output wire [31:0]w_stage1B,
-                     output wire [3:0]opcode,
-                     output wire [3:0]rd_adr1,
-                     output wire [3:0]rd_adr2,
-                     output wire [3:0]wr_adr,
-                     output wire wr_en,
+                     output wire [31:0]w_stage4,          //32-bit bus between register_stage_2 and multiplexer
+                     output wire [31:0]w_stage3,          //32-bit bus between ALU_OUT and register_stage_2
+                     output wire [31:0]w_stage2A,         //32-bit bus between register_stage1A and ALU_IN1
+                     output wire [31:0]w_stage2B,         //32-bit bus between register_stage1B and ALU_IN2
+                     output wire [31:0]w_stage1A,         //32-bit bus between register file out 1 and register_stage1A
+                     output wire [31:0]w_stage1B,         //32-bit bus between register file out 1 and register_stage1B
+                     output wire [3:0]opcode,             //4-bit opcode bus 
+                     output wire [3:0]rd_adr1,            //4-bit read address 1 bus
+                     output wire [3:0]rd_adr2,            //4-bit read address 2 bus
+                     output wire [3:0]wr_adr,             //4-bit write address bus
+                     output wire wr_en,                   //write enable signal
                      output wire carry_flag,              //carry flag signal
                      output wire overflow_flag,           //overflow flag signal
                      output wire zero_flag,               //zero flag signal
